@@ -5,6 +5,12 @@ on:
     branches:
       - main  # o modifica con il tuo branch principale
 
+# Add permissions required for GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
