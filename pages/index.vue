@@ -61,92 +61,11 @@
           </a>
         </div>
       </section>
-
-      <section class="projects">
-        <h2>PROJECTS</h2>
-        <div class="divider">
-          <span class="dot"></span>
-        </div>
-
-        <!-- Project items will go here -->
-        <div class="project-list">
-          <div
-            v-for="project in projects"
-            :key="project.id"
-            class="project-card"
-          >
-            <div class="project-image">
-              <img :src="project.image" :alt="project.title" />
-            </div>
-            <div class="project-content">
-              <h3>{{ project.title }}</h3>
-              <p>{{ project.description }}</p>
-              <div class="project-tags">
-                <span
-                  v-for="(tag, index) in project.tags"
-                  :key="index"
-                  class="tag"
-                  >{{ tag }}</span
-                >
-              </div>
-              <div class="project-links">
-                <a
-                  v-if="project.demo"
-                  :href="project.demo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn"
-                  >Demo</a
-                >
-                <a
-                  v-if="project.github"
-                  :href="project.github"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   </div>
 </template>
 
 <script setup>
-const projects = [
-  {
-    id: 1,
-    title: "Personal Portfolio",
-    description: "My developer portfolio website built with Nuxt.js",
-    image: "/projects/portfolio.jpg",
-    tags: ["Vue.js", "Nuxt.js", "CSS"],
-    github: "https://github.com/colonnaemanuele/portfolio",
-    demo: "https://colonnaemanuele.github.io",
-  },
-  {
-    id: 2,
-    title: "JavaScript Blog Platform",
-    description:
-      "A blogging platform focused on JavaScript and web development topics",
-    image: "/projects/blog.jpg",
-    tags: ["Vue.js", "Node.js", "Express", "MongoDB"],
-    github: "https://github.com/colonnaemanuele/js-blog",
-    demo: "https://js-blog-demo.com",
-  },
-  {
-    id: 3,
-    title: "Weather App",
-    description: "A simple weather application displaying forecast data",
-    image: "/projects/weather.jpg",
-    tags: ["React.js", "API Integration", "CSS"],
-    github: "https://github.com/colonnaemanuele/weather-app",
-    demo: "https://weather-app-demo.com",
-  },
-];
-
 const toggleMenu = () => {
   // Add menu toggle functionality here
 };
