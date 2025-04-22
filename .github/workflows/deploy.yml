@@ -29,14 +29,18 @@ jobs:
 
       - name: Generate static site
         run: npm run generate
-
-      - name: Add .nojekyll
-        run: touch dist/.nojekyll
+      
+      - name: Check permissions
+        run: |
+          echo "Checking permissions..."
+          if [ -z "${{ secrets.GITHUB_TOKEN }}" ]; then
+            echo "GITHUB_TOKEN is not set. Exiting."
+            exit 1
+          fi
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .output/public
-          publish_branch: gh-pages
-
+          publish_branch: gh-pagesß
