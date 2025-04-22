@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     baseURL: "/",
     buildAssetsDir: "/_nuxt/",
     head: {
-      title: "My Nuxt App",
+      title: "Emanuele Colonna",
       meta: [{ name: "description", content: "My Nuxt App Description" }],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },

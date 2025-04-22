@@ -53,18 +53,11 @@
             <Icon name="mdi:linkedin" />
           </a>
           <a
-            href="https://twitter.com/emanuelecolonna"
+            href="https://scholar.google.com/citations?user=AQk15FYAAAAJ&hl=en"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IconTwitter />
-          </a>
-          <a
-            href="https://medium.com/@emanuelecolonna"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconMedium />
+          <Icon name="simple-icons:googlescholar" />
           </a>
         </div>
       </section>
