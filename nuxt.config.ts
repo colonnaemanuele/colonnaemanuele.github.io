@@ -3,14 +3,24 @@ export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
+
   app: {
-    baseURL: "/",
-    buildAssetsDir: "/_nuxt/",
     head: {
       title: "Emanuele Colonna",
-      meta: [{ name: "description", content: "My Nuxt App Description" }],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      meta: [{ name: "description", content: "Personal Web Site" }],
     },
   },
-  modules: ["@nuxt/content", "@nuxt/icon", "@nuxt/image", "@nuxt/ui"],
+
+  build: {
+    transpile: ["vuetify"]
+  },
+
+  buildModules: ['@nuxtjs/vuetify'],
+
+  imports: {
+    autoImport: true,
+    dirs: ["*"],
+  },
+
+  modules: ["vuetify-nuxt-module"],
 });

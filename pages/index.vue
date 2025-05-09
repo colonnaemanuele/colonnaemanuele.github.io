@@ -35,22 +35,22 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon name="mdi:github" />
-          </a>
+          <v-icon size="24">mdi-github</v-icon>
+        </a>
           <a
             href="https://www.linkedin.com/in/emanuele-colonna-60b876225/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon name="mdi:linkedin" />
-          </a>
+          <v-icon size="24">mdi-linkedin</v-icon>
+        </a>
           <a
             href="https://scholar.google.com/citations?user=AQk15FYAAAAJ&hl=en"
             target="_blank"
             rel="noopener noreferrer"
           >
-          <Icon name="simple-icons:googlescholar" />
-          </a>
+          <v-icon size="24">mdi-school</v-icon>
+        </a>
         </div>
       </section>
     </main>
