@@ -1,16 +1,8 @@
 <template>
   <div class="container">
-    <header>
-      <div class="logo">Emanuele Colonna</div>
-      <button class="menu-toggle" @click="toggleMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </header>
-
     <main>
       <section class="hero">
+        <div style="height: 40px;"></div>
         <div class="profile-image">
           <!-- Add your profile image here -->
           <img src="/assets/profile.jpeg" alt="Emanuele Colonna" />
