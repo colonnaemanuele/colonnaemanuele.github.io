@@ -17,12 +17,18 @@
         value="home"
         @click="navigateTo('/')"
       ></v-list-item>
-      <!-- <v-list-item
+      <v-list-item
         prepend-icon="mdi-hammer-wrench"
         title="Project"
         value="projects"
         @click="navigateTo('/projects')" 
-      ></v-list-item> -->
+      ></v-list-item>
+      <v-list-item
+        prepend-icon="mdi-book-open-page-variant"
+        title="Publications"
+        value="publications"
+        @click="navigateTo('/publications')"
+      ></v-list-item>
       <v-list-item
         prepend-icon="mdi-contacts"
         title="Contact"
