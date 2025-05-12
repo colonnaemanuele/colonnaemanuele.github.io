@@ -1,42 +1,43 @@
 <template>
-  <v-app-bar :elevation="2" rounded dense height="20" app>
-    <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+  <v-app-bar density='compact' scroll-behavior="hide" :style="{ padding: '0 8px', minHeight: '48px' }"
+  >
+    <v-app-bar-nav-icon
+      @click.stop="drawer = !drawer"
+    ></v-app-bar-nav-icon>
   </v-app-bar>
 
-  <v-navigation-drawer v-model="drawer" app temporary>
-    <v-list>
+  <v-navigation-drawer
+    v-model="drawer"
+    temporary
+  >
+    <v-list nav>
       <v-list-item
-        v-for="item in navItems"
-        :key="item.title"
-        @click="scrollToSection(item.to); drawer = false"
-      >
-        <v-list-item-title>{{ item.title }}</v-list-item-title>
-      </v-list-item>
+        prepend-icon="mdi-home-city"
+        title="Home"
+        value="home"
+        @click="navigateTo('/')"
+      ></v-list-item>
+      <!-- <v-list-item
+        prepend-icon="mdi-hammer-wrench"
+        title="Project"
+        value="projects"
+        @click="navigateTo('/projects')" 
+      ></v-list-item> -->
+      <v-list-item
+        prepend-icon="mdi-contacts"
+        title="Contact"
+        value="contact"
+        @click="navigateTo('/contact')"
+      ></v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
 
-<script setup>
-import { ref } from 'vue'
+<script lang="ts" setup>
+const drawer = ref(false);
+const group = ref("");
 
-const drawer = ref(false)
-const navItems = [
-  { title: 'Home', to: '#home' },
-  { title: 'Projects', to: '#projects' },
-  { title: 'Contact', to: '#contact' }
-]
-
-const isActive = (hash) => {
-  return typeof window !== 'undefined' && window.location.hash === hash
-}
-
-const scrollToSection = (hash) => {
-  if (typeof window !== 'undefined') {
-    const el = document.querySelector(hash)
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
-      window.location.hash = hash
-    }
-  }
-}
+watch(group, () => {
+  drawer.value = false;
+});
 </script>
