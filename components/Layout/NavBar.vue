@@ -17,7 +17,7 @@
         value="home"
         @click="navigateTo('/')"
       ></v-list-item>
-      <v-list-item
+      <v-list-item disabled
         prepend-icon="mdi-hammer-wrench"
         title="Projects"
         value="projects"
