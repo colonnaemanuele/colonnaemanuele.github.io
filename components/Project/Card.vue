@@ -71,8 +71,6 @@ const shouldShowToggleButton = (abstract: string): boolean => {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  /* Number of lines to show */
   line-clamp: 2;
-  /* Standard property for compatibility */
 }
 </style>
