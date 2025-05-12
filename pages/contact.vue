@@ -47,66 +47,6 @@
       </v-col>
     </v-row>
 
-    <!-- Publications Section -->
-    <v-row justify="center" class="mt-8">
-      <v-col cols="12" md="8">
-        <h2 class="text-h4 text-center mb-6">Publications</h2>
-        
-        <v-card class="mb-6" elevation="2" v-for="(pub, index) in publications" :key="index">
-          <v-card-title class="text-h6">
-            {{ pub.title }}
-          </v-card-title>
-          <v-card-subtitle>
-            {{ pub.authors }}
-          </v-card-subtitle>
-          <v-card-text>
-            <p><strong>{{ pub.journal }}</strong>, {{ pub.year }}</p>
-            <p class="mt-2">{{ pub.abstract }}</p>
-          </v-card-text>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn 
-              v-if="pub.doi" 
-              text 
-              color="primary" 
-              :href="`https://doi.org/${pub.doi}`" 
-              target="_blank"
-            >
-              DOI
-            </v-btn>
-            <v-btn 
-              v-if="pub.url" 
-              text 
-              color="primary" 
-              :href="pub.url" 
-              target="_blank"
-            >
-              View Publication
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
-
     <Contact/>
   </v-container>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      publications: [
-        {
-          title: "Towards Italian Sign Language Generation for digital humans",
-          authors: "E. Colonna, A. Arezzo, D. Roberto, D. Landi, F. Vitulano, G. Vessio, G. Castellano",
-          journal: "Eight Workshop on Natural Language for Artificial Intelligence (NL4AI 2024) @AIxIA 2024",
-          year: "2024",
-          doi: "10.1234/example.567",
-          url: "https://www.researchgate.net/profile/Gennaro-Vessio/publication/387398556_Towards_Italian_Sign_Language_Generation_for_digital_humans/links/676bc637fb9aff6eaaebc134/Towards-Italian-Sign-Language-Generation-for-digital-humans.pdf"
-        },
-      ]
-    };
-  }
-};
-</script>
