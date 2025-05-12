@@ -27,7 +27,7 @@
       supervisors: "G. Castellano",
       status: "ONGOING",
       tags: ["3D Computer Vision", "Sign Language Recognition"],
-      image: "https://placehold.co/600x400", // External URL
+      image: "https://placehold.co/600x400",
     },
     {
       id: "It-CSLT",
@@ -36,7 +36,7 @@
       supervisors: "G. Castellano",
       status: "ONGOING",
       tags: ["3D Computer Vision", "Sign Language Translation"],
-      // image: "https://placehold.co/600x400", // External URL
+      image: "https://placehold.co/600x400",
     },
     {
       id: "GAJMA",
@@ -45,7 +45,7 @@
       supervisors: "G. Castellano",
       status: "ONGOING",
       tags: ["3D Computer Vision", "Manga", "Anime", "Image Animation"],
-      // image: "https://placehold.co/600x400", // External URL
+      image: "https://placehold.co/600x400",
     },
     {
       id: "JPMTR",
@@ -54,7 +54,7 @@
       supervisors: "Supervisor Name",
       status: "ONGOING",
       tags: ["Computer Vision", "OCR", "Translation", "Manga Processing"],
-      // image: "https://placehold.co/600x400", // External URL
+      image: "https://placehold.co/600x400",
     },
   ]);
   </script>

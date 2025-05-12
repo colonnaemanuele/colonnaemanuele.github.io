@@ -32,7 +32,7 @@
     </v-container>
     <v-footer>
       <v-container fluid class="text-center">
-        Last Updated: {{ new Date().toLocaleDateString() }}
+        Last Updated: 15/05/2025
       </v-container>
     </v-footer>
   </v-app>
@@ -40,7 +40,6 @@
 
 <script setup>
 import { ref } from 'vue';
-
 const drawer = ref(false);
 
 const toggleMenu = () => {
