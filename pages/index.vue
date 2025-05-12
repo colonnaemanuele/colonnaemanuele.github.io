@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-container>
+    <v-col>
       <v-main>
         <v-container>
           <v-row justify="center">
@@ -29,9 +29,9 @@
         </v-container>
       </v-main>
       <ConnectMe />
-    </v-container>
+    </v-col>
     <v-footer>
-      <v-container fluid class="text-center">
+      <v-container fluid class="text-right">
         Last Updated: 15/05/2025
       </v-container>
     </v-footer>
