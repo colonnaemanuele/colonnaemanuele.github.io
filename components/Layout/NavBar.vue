@@ -19,7 +19,7 @@
       ></v-list-item>
       <v-list-item
         prepend-icon="mdi-hammer-wrench"
-        title="Project"
+        title="Projects"
         value="projects"
         @click="navigateTo('/projects')" 
       ></v-list-item>
