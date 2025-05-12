@@ -37,7 +37,7 @@
 <script setup lang="ts">
 import type { Publication } from "@/models/publication";
 
-defineProps<{ publications: Publication[] }>();
+defineProps<{ publication: Publication[] }>();
 
 const toggleAbstract = (index: number) => {
     publications.value[index].showFullAbstract = !publications.value[index].showFullAbstract;

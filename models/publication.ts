@@ -6,6 +6,6 @@ export interface Publication {
     pages?: string;
     doi?: string;
     url: string;
-    abstract?: string;
+    abstract: string;
     showFullAbstract?: boolean;
   }
