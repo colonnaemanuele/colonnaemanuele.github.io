@@ -34,7 +34,7 @@ const publications = ref<Publication[]>([
         abstract: "In the rapidly evolving field of human-computer interaction, the need for inclusive and accessible communication methods has become increasingly vital. This paper introduces an early exploration of Text-to-LIS, a new model designed to generate contextually accurate Italian Sign Language (LIS) gestures for digital humans. Our approach addresses the importance of non-verbal communication in virtual environments, focusing on enhancing interaction for the deaf and hard-of-hearing community. The core contribution of this work is developing an iterative framework that leverages a comprehensive multimodal dataset, integrating textual and audio inputs with visual data. Utilizing state-of-the-art deep learning algorithms and advanced human pose estimation techniques, the framework enables the progressive refinement of generated gestures, ensuring realism and contextual relevance. The potential applications of the Text-to-LIS model are wide-ranging, from improving accessibility in digital environments to supporting educational tools and promoting LIS in the digital age. The code is publicly available at: https://github.com/CarpiDiem98/text-to-lis/.",
     },
     {
-        title: "Costellazioni tipografiche-typographical costellations - Tipografia Machine-Kern 0.3",
+        title: "Costellazioni tipografiche-typographical costellations 15 - Tipografia Machine-Kern 0.3",
         authors: "E. Colonna, M. Colonna",
         journal: "MD JOURNAL",
         year: "2023",
