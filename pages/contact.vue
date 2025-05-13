@@ -52,7 +52,7 @@
             Feel free to reach out to me for collaborations, research inquiries, or any other questions.
           </p>
         </v-col>
-        <v-col cols="12">
+        <v-col cols="10">
           <Contact />
         </v-col>
       </v-row>
