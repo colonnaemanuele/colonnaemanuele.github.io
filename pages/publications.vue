@@ -1,14 +1,15 @@
 <template>
-    <v-row justify="center" class="mt-8">
-        <v-col cols="12" md="8">
-            <h2 class="text-h4 text-center mb-6">Publications</h2>
-            <PublicationCard
-                v-for="(publication, index) in publications"
-                :key="index"
-                :publication="publication"
-            />
+    <v-app>
+        <v-col>
+            <v-row justify="center" class="mt-4">
+                <v-col cols="12" md="9">
+                    <h2 class="text-h4 text-center mb-6">Publications</h2>
+                    <PublicationCard v-for="(publication, index) in publications" :key="index"
+                        :publication="publication" />
+                </v-col>
+            </v-row>
         </v-col>
-    </v-row>
+    </v-app>
 </template>
 <script lang="ts" setup>
 import type { Publication } from "@/models/publication";
