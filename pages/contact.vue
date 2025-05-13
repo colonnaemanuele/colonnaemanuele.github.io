@@ -47,14 +47,13 @@
       </v-row>
       <v-row justify="center" class="mt-10">
         <v-col cols="12">
-            <h2 class="text-h4 text-center mb-4">Contact Me</h2>
-            <p class="text-center mb-6">
-                Feel free to reach out to me for collaborations, research inquiries, or any other questions.
-            </p>
+          <h2 class="text-h4 text-center mb-4">Contact Me</h2>
+          <p class="text-center mb-6">
+            Feel free to reach out to me for collaborations, research inquiries, or any other questions.
+          </p>
         </v-col>
-        <v-col cols="12" >
-
-            <Contact />
+        <v-col cols="12">
+          <Contact />
         </v-col>
       </v-row>
     </v-col>
