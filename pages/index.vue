@@ -32,7 +32,7 @@
     </v-col>
     <v-footer>
       <v-container fluid class="text-right">
-        Last Updated: 13/05/2025
+        <p style="font-family: monospace;">Last Updated: 13/05/2025</p>
       </v-container>
     </v-footer>
   </v-app>
