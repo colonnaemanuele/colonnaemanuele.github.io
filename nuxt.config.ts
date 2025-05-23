@@ -8,6 +8,9 @@ export default defineNuxtConfig({
     head: {
       title: "Emanuele Colonna",
       meta: [{ name: "description", content: "Personal Web Site" }],
+      link: [
+        { rel: "icon", type: "image/svg+xml", href: "https://cdn.jsdelivr.net/npm/@mdi/svg/svg/debian.svg"},
+      ],
     },
   },
 
