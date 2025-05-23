@@ -24,6 +24,12 @@
         @click="navigateTo('/projects')" 
       ></v-list-item>
       <v-list-item
+        prepend-icon="mdi-human-male-board"
+        title="Lectures"
+        value="lectures"
+        @click="navigateTo('/lectures')" 
+      ></v-list-item>
+      <v-list-item
         prepend-icon="mdi-book-open-page-variant"
         title="Publications"
         value="publications"
