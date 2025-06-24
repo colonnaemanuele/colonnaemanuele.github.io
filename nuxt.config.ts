@@ -8,9 +8,6 @@ export default defineNuxtConfig({
     head: {
       title: "Emanuele Colonna",
       meta: [{ name: "description", content: "Personal Web Site" }],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-      ],
     },
   },
 
