@@ -9,16 +9,21 @@ export default defineNuxtConfig({
       title: "Emanuele Colonna",
       meta: [{ name: "description", content: "Personal Web Site" }],
       link: [
-        { rel: "icon", type: "image/svg+xml", href: "https://cdn.jsdelivr.net/npm/@mdi/svg/svg/debian.svg"},
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'shortcut icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', href: '/favicon.ico' }
       ],
     },
   },
 
+  css: [
+    'vuetify/lib/styles/main.sass',
+    '@mdi/font/css/materialdesignicons.min.css'
+  ],
+
   build: {
     transpile: ["vuetify"]
   },
-
-  buildModules: ['@nuxtjs/vuetify'],
 
   imports: {
     autoImport: true,
