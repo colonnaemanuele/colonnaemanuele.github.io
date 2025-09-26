@@ -23,8 +23,10 @@
 <script lang="ts" setup>
 import type { Lecture } from "@/models/lecture";
 
-import cvCaseStudiesImg from "@/assets/lecture/cv_case_studies.jpeg";
-import videoUnderstandingImg from "@/assets/lecture/video_understanding.jpeg";
+import cvCaseStudiesImg from "@/assets/lecture/cv_case_studies/cv_case_studies.jpeg";
+import cvCaseStudiesPdf from "@/assets/lecture/cv_case_studies/cv_case_studies_2024_2025.pdf";
+import videoUnderstandingImg from "@/assets/lecture/video_understanding/video_understanding.jpeg";
+import videoUnderstandingPdf from "@/assets/lecture/video_undestanding/video_understanding.pdf";
 
 
 // this works
@@ -38,7 +40,7 @@ const lectures = ref<Lecture[]>([
         date: "2023-04-23",
         tags: ["Computer Vision", "Video Understanding", "Sign Language"],
         image: cvCaseStudiesImg,
-        pdf: "https://unibari-my.sharepoint.com/:b:/g/personal/emanuele_colonna_uniba_it/ES5ZiCxsUGdBrJdVnvH8MYcBCl_siT3g2dLxSrINHz_ISw?e=yuFeXh",
+        pdf: cvCaseStudiesPdf,
     },
     {
         id: "1",
@@ -49,7 +51,7 @@ const lectures = ref<Lecture[]>([
         date: "2023-05-23",
         tags: ["Computer Vision", "Video Understanding"],
         image: videoUnderstandingImg,
-        pdf: "https://unibari-my.sharepoint.com/:b:/g/personal/emanuele_colonna_uniba_it/EebLDtUoMYxKjB6wrzGKSdkBSOLMQMAaDInsRJ5YGOg5KA?e=HIf19T",
+        pdf: videoUnderstandingPdf,
     },
 ]);
 
