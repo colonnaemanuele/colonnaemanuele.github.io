@@ -21,38 +21,44 @@
   </v-app>
 </template>
 <script lang="ts" setup>
+import { ref } from "vue";
 import type { Lecture } from "@/models/lecture";
 
-import cvCaseStudiesImg from "@/assets/lecture/cv_case_studies/cv_case_studies.jpeg";
-import cvCaseStudiesPdf from "@/assets/lecture/cv_case_studies/cv_case_studies_2024_2025.pdf";
-import videoUnderstandingImg from "@/assets/lecture/video_understanding/video_understanding.jpeg";
-import videoUnderstandingPdf from "@/assets/lecture/video_undestanding/video_understanding.pdf";
+const lectureAssets = import.meta.glob("../assets/lecture/**", { eager: true, as: "url" });
+function findAsset(filename: string): string | null {
+  for (const key in lectureAssets) {
+    const url = (lectureAssets as Record<string, string>)[key];
+    if (key.endsWith(filename) || url.endsWith(filename)) {
+      return url;
+    }
+  }
+  return null;
+}
 
-
-// this works
+const placeholderImg = "/placeholder.png";
 const lectures = ref<Lecture[]>([
-    {   
-        id: "0",
-        title: "Case Studies",
-        description: "Case studies for Computer Vision 2024/2025",
-        supervisors: ["Prof. Giovanna Castellano"],
-        status: "Completed",
-        date: "2023-04-23",
-        tags: ["Computer Vision", "Video Understanding", "Sign Language"],
-        image: cvCaseStudiesImg,
-        pdf: cvCaseStudiesPdf,
-    },
-    {
-        id: "1",
-        title: "Video Understanding",
-        description: "Introduction and overview of video understanding, including key concepts and applications.",
-        supervisors: ["Prof. Giovanna Castellano"],
-        status: "Completed",
-        date: "2023-05-23",
-        tags: ["Computer Vision", "Video Understanding"],
-        image: videoUnderstandingImg,
-        pdf: videoUnderstandingPdf,
-    },
+  {   
+      id: "0",
+      title: "Case Studies",
+      description: "Case studies for Computer Vision 2024/2025",
+      supervisors: ["Prof. Giovanna Castellano"],
+      status: "Completed",
+      date: "2023-04-23",
+      tags: ["Computer Vision", "Video Understanding", "Sign Language"],
+      image: findAsset("cv_case_studies.jpeg") ?? placeholderImg,
+      pdf: findAsset("cv_case_studies_2024_2025.pdf"),
+  },
+  {
+      id: "1",
+      title: "Video Understanding",
+      description: "Introduction and overview of video understanding, including key concepts and applications.",
+      supervisors: ["Prof. Giovanna Castellano"],
+      status: "Completed",
+      date: "2023-05-23",
+      tags: ["Computer Vision", "Video Understanding"],
+      image: findAsset("video_understanding.jpeg") ?? placeholderImg,
+      pdf: findAsset("video_understanding.pdf"),
+  },
 ]);
 
 </script>
