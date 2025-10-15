@@ -36,9 +36,12 @@
                 </p>
 
                 <v-chip-group class="mt-4">
-                  <v-chip small color="primary" text-color="white">3D Computer Vision</v-chip>
-                  <v-chip small color="primary" text-color="white">Deep Learning</v-chip>
-                  <v-chip small color="primary" text-color="white">Sign Language</v-chip>
+                  <div class="d-flex flex-wrap">
+                    <v-chip class="ma-1" small>Sign Language</v-chip>
+                    <v-chip class="ma-1" small>Deep Learning</v-chip>
+                    <v-chip class="ma-1" small>Computer Vision</v-chip>
+                    <v-chip class="ma-1" small>Open Source</v-chip>
+                  </div>
                 </v-chip-group>
               </v-col>
             </v-row>
