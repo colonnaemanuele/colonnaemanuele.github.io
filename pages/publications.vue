@@ -20,10 +20,10 @@ const publications = ref<Publication[]>([
     {
         title: "Label Anything: Multi-Class Few-Shot Semantic Segmentation with Visual Prompts",
         authors: "P. De Marinis, N. Fanelli, R. Scaringi, E. Colonna, G. Fiameni, G. Vessio, G. Castellano",
-        journal: "arXiv preprint arXiv:2407.02075",
-        year: "2024",
-        doi: "https://doi.org/10.48550/arXiv.2407.02075",
-        url: "https://arxiv.org/abs/2407.02075",
+        journal: "European Conference on Artificial Intelligence (ECAI), 2025",
+        year: "2025",
+        doi: "https://doi.org/10.3233/FAIA251289",
+        url: "https://ebooks.iospress.nl/doi/10.3233/FAIA251289",
         abstract: "We present Label Anything, an innovative neural network architecture designed for few-shot semantic segmentation (FSS) that demonstrates remarkable generalizability across multiple classes with minimal examples required per class. Diverging from traditional FSS methods that predominantly rely on masks for annotating support images, Label Anything introduces varied visual prompts -- points, bounding boxes, and masks -- thereby enhancing the framework's versatility and adaptability. Unique to our approach, Label Anything is engineered for end-to-end training across multi-class FSS scenarios, efficiently learning from diverse support set configurations without retraining. This approach enables a \"universal\" application to various FSS challenges, ranging from -way -shot to complex -way -shot configurations while remaining agnostic to the specific number of class examples. This innovative training strategy reduces computational requirements and substantially improves the model's adaptability and generalization across diverse segmentation tasks. Our comprehensive experimental validation, particularly achieving state-of-the-art results on the COCO- benchmark, underscores Label Anything's robust generalization and flexibility. The source code is publicly available at: https://github.com/pasqualedem/LabelAnything.",
     },
     {
