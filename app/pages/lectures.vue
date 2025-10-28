@@ -4,7 +4,7 @@
       <!-- Title row -->
       <v-row justify="center">
         <v-col cols="12">
-          <p class="text-h4 text-center">Lecture</p>
+          <p class="text-h4 text-center">Lectures</p>
         </v-col>
       </v-row>
       <v-row>
