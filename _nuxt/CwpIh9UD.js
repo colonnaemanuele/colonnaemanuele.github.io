@@ -1,1 +1,0 @@
-import"./rQf2cp6A.js";const e=""+new URL("profile.BHNGzYAU.jpeg",import.meta.url).href;export{e as _};
