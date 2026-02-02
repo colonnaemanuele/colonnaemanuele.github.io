@@ -228,3 +228,7 @@ export default {
 }
 
 </style>
+
+
+
+echo "app/assets/private/** filter=git-crypt diff=git-crypt" >> .gitattributes
