@@ -24,7 +24,7 @@
 import { ref } from "vue";
 import type { Lecture } from "@/models/lecture";
 
-const lectureAssets = import.meta.glob("../assets/lecture/**", { eager: true, as: "url" });
+const lectureAssets = import.meta.glob("../../.data/lecture/**", { eager: true, as: "url" });
 function findAsset(filename: string): string | null {
   for (const key in lectureAssets) {
     const url = (lectureAssets as Record<string, string>)[key];
