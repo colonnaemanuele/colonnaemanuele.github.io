@@ -46,7 +46,7 @@ export default {
     },
     mounted() {
         // Import all images from assets/private folder
-        const images = import.meta.glob('../../.data/private/*', {
+        const images = import.meta.glob('~/assets/private/*', {
             eager: true,
             import: 'default',
         });
