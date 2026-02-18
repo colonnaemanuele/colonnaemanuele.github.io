@@ -1,64 +1,29 @@
 <template>
   <v-app>
     <v-container fluid>
-      <!-- Title row -->
       <v-row justify="center">
         <v-col cols="12">
-          <p class="text-h4 text-center">Lectures</p>
+          <h2 class="text-h4 text-center mb-8">Lectures</h2>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col
-          v-for="(lecture, index) in lectures"
-          :key="index"
-          cols="12"
-          md="6"
-        >
-          <LectureCard :lecture="lecture" />
+      <v-row justify="center">
+        <v-col cols="12" md="10">
+          <v-row>
+            <v-col
+              v-for="(lecture, index) in lectures"
+              :key="index"
+              cols="12"
+              md="6"
+            >
+              <LectureCard :lecture="lecture" />
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </v-container>
   </v-app>
 </template>
-<script lang="ts" setup>
-import { ref } from "vue";
-import type { Lecture } from "@/models/lecture";
 
-const lectureAssets = import.meta.glob("~/assets/lecture/**", { eager: true, as: "url" });
-function findAsset(filename: string): string | null {
-  for (const key in lectureAssets) {
-    const url = (lectureAssets as Record<string, string>)[key];
-    if (key.endsWith(filename) || url.endsWith(filename)) {
-      return url;
-    }
-  }
-  return null;
-}
-
-const placeholderImg = "/placeholder.png";
-const lectures = ref<Lecture[]>([
-  {   
-      id: "0",
-      title: "Case Studies",
-      description: "Case studies for Computer Vision 2024/2025",
-      supervisors: ["Prof. Giovanna Castellano"],
-      status: "Completed",
-      date: "2023-04-23",
-      tags: ["Computer Vision", "Video Understanding", "Sign Language"],
-      image: findAsset("cv_case_studies.jpeg") ?? placeholderImg,
-      pdf: findAsset("cv_case_studies_2024_2025.pdf"),
-  },
-  {
-      id: "1",
-      title: "Video Understanding",
-      description: "Introduction and overview of video understanding, including key concepts and applications.",
-      supervisors: ["Prof. Giovanna Castellano"],
-      status: "Completed",
-      date: "2023-05-23",
-      tags: ["Computer Vision", "Video Understanding"],
-      image: findAsset("video_understanding.jpeg") ?? placeholderImg,
-      pdf: findAsset("video_understanding.pdf"),
-  },
-]);
-
+<script setup lang="ts">
+const { lectures } = useLectures();
 </script>
