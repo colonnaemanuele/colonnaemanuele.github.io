@@ -1,149 +1,80 @@
 <template>
-  <div>
-    <!-- About Section - Hero Style -->
-    <section id="about" ref="aboutRef">
-      <v-container class="py-16" fluid>
-        <!-- First Row: Avatar and Info -->
-        <v-row no-gutters class="mb-8">
-          <!-- Left Column: Avatar -->
-          <v-col
-            cols="12"
-            md="6"
-            lg="4"
-            class="d-flex flex-column align-center justify-center pa-8 pa-md-12"
-          >
-            <v-avatar size="280" class="mb-8 elevation-12">
-              <v-img
-                src="/assets/profile.jpeg"
-                alt="Emanuele Colonna"
-                cover
-              />
-            </v-avatar>
+  <section id="about" ref="aboutRef">
+    <v-container fluid>
+      <v-row no-gutters class="mb-8">
+        <v-col
+          cols="12"
+          md="6"
+          lg="4"
+          class="d-flex flex-column align-center justify-center pa-8 pa-md-12"
+        >
+          <v-avatar size="280" class="mb-8 elevation-12">
+            <v-img src="/assets/profile.jpeg" alt="Emanuele Colonna" cover />
+          </v-avatar>
 
-            <ConnectMe />
-          </v-col>
+          <ConnectMe />
+        </v-col>
 
-          <!-- Right Column: Bio and Info -->
-          <v-col cols="12" md="6" lg="8" class="pa-8 pa-md-12">
-            <h1 class="text-h2 font-weight-bold mb-3 text-gradient">
-              Emanuele Colonna
-            </h1>
-            <div class="text-h5 text-primary mb-4 font-weight-medium">
-              PhD Student
-            </div>
-            <p class="text-h6 text-medium-emphasis mb-6 font-weight-light">
-              University of Bari Aldo Moro · Department of Computer Science
+        <!-- Right Column: Bio and Info -->
+        <v-col cols="12" md="6" lg="8" class="pa-8 pa-md-12">
+          <h1 class="text-h2 font-weight-bold mb-3 text-gradient"> Emanuele Colonna</h1>
+          <div class="text-h5 text-primary mb-4 font-weight-medium"> PhD Student </div>
+          <p class="text-h6 text-medium-emphasis mb-6 font-weight-light"> University of Bari Aldo Moro · Department of Computer Science </p>
+
+          <v-divider class="my-6" />
+
+          <div class="text-body-1 mb-6 text-justify">
+            <p class="mb-4"> I am a PhD student in
+              <a
+                href="https://en.wikipedia.org/wiki/Computer_vision"
+                target="_blank"
+                class="text-primary text-decoration-none font-weight-bold"
+                > Computer Science & Mathematics
+              </a>
+              in the Department of Computer Science at the
+              <a href="https://www.uniba.it" target="_blank" class="text-primary text-decoration-none font-weight-bold">
+              University of Bari Aldo Moro</a>, where I work on <strong>computer vision</strong> and
+              <strong>deep learning</strong>, under the supervision of leading
+              researchers. </p>
+            <p>
+              I am currently pursuing a PhD funded by a fellowship within the
+              framework of the Italian <em>"D.M. n. 118/23"</em> under the PNRR,
+              Mission 4, Component 1, Investment 4.1 on the PhD project
+              <em>
+              "Analysis and Valorization of Digitized Artistic Heritage using
+              Artificial Intelligence techniques"
+              </em>. 
+              I am currently working in the CILab lab.
             </p>
-
-            <v-divider class="my-6" />
-
-            <div class="text-body-1 mb-6 text-justify">
-              <p class="mb-4">
-                I am a PhD student in
-                <a
-                  href="https://en.wikipedia.org/wiki/Computer_vision"
-                  target="_blank"
-                  class="text-primary text-decoration-none font-weight-bold"
-                >Computer Science & Mathematics</a>
-                in the Department of Computer Science at the
-                <a
-                  href="https://www.uniba.it"
-                  target="_blank"
-                  class="text-primary text-decoration-none font-weight-bold"
-                >University of Bari Aldo Moro</a>, where I work on
-                <strong>computer vision</strong> and <strong>deep learning</strong>,
-                under the supervision of leading researchers.
-              </p>
-              <p>
-                I am currently pursuing a PhD funded by a fellowship within the
-                framework of the Italian <em>"D.M. n. 118/23"</em> under the
-                PNRR, Mission 4, Component 1, Investment 4.1 on the PhD project
-                <em
-                  >"Analysis and Valorization of Digitized Artistic Heritage
-                  using Artificial Intelligence techniques"</em>. I am currently
-                working in the CILab lab.
-              </p>
-            </div>
-          </v-col>
-        </v-row>
-
-        <!-- Second Row: Research Interests -->
-        <v-row no-gutters>
-          <v-col cols="12" class="pa-8 pa-md-12">
-            <h3 class="text-h4 font-weight-bold mb-8 text-primary">
-              Research Interests
-            </h3>
-            <v-chip-group>
+          </div>
+            <h1 class="text-h5 mb-8 text-primary"> Research Interests </h1>
+            <v-chip-group class="d-flex flex-wrap gap-4" column>
               <v-chip color="primary" variant="outlined" size="large"
                 >Computer Vision</v-chip>
               <v-chip color="primary" variant="outlined" size="large"
-                >Multimodal Deep Learning</v-chip>
+                >Deep Learning</v-chip>
               <v-chip color="primary" variant="outlined" size="large"
                 >Vision and Language</v-chip>
               <v-chip color="primary" variant="outlined" size="large"
                 >Generative Models</v-chip>
               <v-chip color="primary" variant="outlined" size="large"
-                >MLLMs</v-chip>
-              <v-chip color="primary" variant="outlined" size="large"
-                >Diffusion Models</v-chip>
-              <v-chip color="primary" variant="outlined" size="large"
-                >Artwork Analysis</v-chip>
-              <v-chip color="primary" variant="outlined" size="large"
                 >Sign Language</v-chip>
-            </v-chip-group>
-          </v-col>
-        </v-row>
-      </v-container>
-    </section>
+              </v-chip-group>
+        </v-col>
+      </v-row>
+    </v-container>
+  </section>
 
-    <!-- News Section -->
-    <section id="news" ref="newsRef">
-      <v-sheet color="grey-lighten-5" class="py-16">
-        <v-container fluid>
-          <v-row no-gutters>
-            <v-col cols="12">
-              <div class="text-center mb-10 px-8 px-md-12">
-                <h2 class="text-h3 font-weight-bold mb-3">Latest News</h2>
-                <p class="text-h6 text-medium-emphasis">
-                  Stay updated with my recent activities
-                </p>
-              </div>
-            </v-col>
-          </v-row>
-
-          <v-row no-gutters>
-            <v-col cols="12" class="px-8 px-md-12">
-              <v-timeline side="end" align="start" truncate-line="both">
-                <v-timeline-item
-                  v-for="(item, i) in news"
-                  :key="i"
-                  dot-color="primary"
-                  size="small"
-                  elevation="2"
-                >
-                  <template v-slot:opposite>
-                    <v-chip color="primary" variant="tonal" size="small">
-                      {{ item.date }}
-                    </v-chip>
-                  </template>
-                  <div class="text-body-1" v-html="item.html" />
-                </v-timeline-item>
-              </v-timeline>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-sheet>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications" ref="publicationsRef">
-      <v-container fluid class="py-16">
+  <!-- News Section -->
+  <section id="news" ref="newsRef">
+    <v-sheet color="grey-lighten-5" class="py-16">
+      <v-container fluid>
         <v-row no-gutters>
           <v-col cols="12">
             <div class="text-center mb-10 px-8 px-md-12">
-              <h2 class="text-h3 font-weight-bold mb-3">Publications</h2>
+              <h2 class="text-h3 font-weight-bold mb-3">Latest News</h2>
               <p class="text-h6 text-medium-emphasis">
-                Research contributions and academic work
+                Stay updated with my recent activities
               </p>
             </div>
           </v-col>
@@ -151,71 +82,105 @@
 
         <v-row no-gutters>
           <v-col cols="12" class="px-8 px-md-12">
-            <PublicationCard
-              v-for="(publication, index) in publications"
-              :key="index"
-              :publication="publication"
-              class="mb-6"
-            />
+            <v-timeline side="end" align="start" truncate-line="both">
+              <v-timeline-item
+                v-for="(item, i) in news"
+                :key="i"
+                dot-color="primary"
+                size="small"
+                elevation="2"
+              >
+                <template v-slot:opposite>
+                  <v-chip color="primary" variant="tonal" size="small">
+                    {{ item.date }}
+                  </v-chip>
+                </template>
+                <div class="text-body-1" v-html="item.html" />
+              </v-timeline-item>
+            </v-timeline>
           </v-col>
         </v-row>
       </v-container>
-    </section>
+    </v-sheet>
+  </section>
 
-    <!-- Teaching Section -->
-    <section id="teaching" ref="teachingRef">
-      <v-sheet color="grey-lighten-5" class="py-16">
-        <v-container fluid>
-          <v-row no-gutters>
-            <v-col cols="12">
-              <div class="text-center mb-10 px-8 px-md-12">
-                <h2 class="text-h3 font-weight-bold mb-3">
-                  Teaching & Lectures
-                </h2>
-                <p class="text-h6 text-medium-emphasis">
-                  Educational materials and course content
-                </p>
-              </div>
-            </v-col>
-          </v-row>
+  <!-- Publications Section -->
+  <section id="publications" ref="publicationsRef">
+    <v-container fluid class="py-16">
+      <v-row no-gutters>
+        <v-col cols="12">
+          <div class="text-center mb-10 px-8 px-md-12">
+            <h2 class="text-h3 font-weight-bold mb-3">Publications</h2>
+            <p class="text-h6 text-medium-emphasis">
+              Research contributions and academic work
+            </p>
+          </div>
+        </v-col>
+      </v-row>
 
-          <v-row no-gutters class="px-8 px-md-12">
-            <v-col
-              v-for="(lecture, index) in lectures"
-              :key="index"
-              cols="12"
-              md="6"
-              class="pa-3"
-            >
-              <LectureCard :lecture="lecture" />
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-sheet>
-    </section>
+      <v-row no-gutters>
+        <v-col cols="12" class="px-8 px-md-12">
+          <PublicationCard
+            v-for="(publication, index) in publications"
+            :key="index"
+            :publication="publication"
+            class="mb-6"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" ref="contactRef">
-      <v-container fluid class="py-16">
+  <!-- Teaching Section -->
+  <section id="teaching" ref="teachingRef">
+    <v-sheet color="grey-lighten-5" class="py-16">
+      <v-container fluid>
         <v-row no-gutters>
-          <v-col cols="12" class="px-8 px-md-12">
-            <v-card elevation="0" rounded="xl" class="pa-10">
-              <div class="text-center mb-8">
-                <v-icon size="80" color="primary" class="mb-4"
-                  >mdi-email</v-icon>
-                <h2 class="text-h3 font-weight-bold mb-4">Get in Touch</h2>
-                <p class="text-h6 text-medium-emphasis mb-6">
-                  Feel free to reach out for collaborations, questions, or just
-                  to connect!
-                </p>
-              </div>
-              <ConnectMe />
-            </v-card>
+          <v-col cols="12">
+            <div class="text-center mb-10 px-8 px-md-12">
+              <h2 class="text-h3 font-weight-bold mb-3">Teaching & Lectures</h2>
+              <p class="text-h6 text-medium-emphasis">
+                Educational materials and course content
+              </p>
+            </div>
+          </v-col>
+        </v-row>
+
+        <v-row no-gutters class="px-8 px-md-12">
+          <v-col
+            v-for="(lecture, index) in lectures"
+            :key="index"
+            cols="12"
+            md="6"
+            class="pa-3"
+          >
+            <LectureCard :lecture="lecture" />
           </v-col>
         </v-row>
       </v-container>
-    </section>
-  </div>
+    </v-sheet>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" ref="contactRef">
+    <v-container fluid class="py-16">
+      <v-row no-gutters>
+        <v-col cols="12" class="px-8 px-md-12">
+          <v-card elevation="0" rounded="xl" class="pa-10">
+            <div class="text-center mb-8">
+              <v-icon size="80" color="primary" class="mb-4">mdi-email</v-icon>
+              <h2 class="text-h3 font-weight-bold mb-4">Get in Touch</h2>
+              <p class="text-h6 text-medium-emphasis mb-6">
+                Feel free to reach out for collaborations, questions, or just to
+                connect!
+              </p>
+            </div>
+            <ConnectMe />
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -223,6 +188,10 @@ const { publications } = usePublications();
 const { lectures } = useLectures();
 
 const news = ref([
+  {
+    date: "Feb 2026",
+    html: 'Out work <a href="https://www.sciencedirect.com/science/article/pii/S107731422600041X?via%3Dihub" target="_blank" class="text-primary text-decoration-none">Handscribe</a> was accepted at <a href="https://www.sciencedirect.com/journal/computer-vision-and-image-understanding" target="_blank" class="text-primary text-decoration-none">Computer Vision and Image Understanding</a>. 🏆',
+  },
   {
     date: "Sep 2025",
     html: 'I have joined the <a href="https://www.ulpgc.es" target="_blank" class="text-primary text-decoration-none">Universidad de Las Palmas de Gran Canaria</a> as a visiting researcher at the <a href="https://idetic.ulpgc.es/en/" target="_blank" class="text-primary text-decoration-none">Instituto Universitario para el Desarrollo</a> for six months, under the supervision of <strong>Dr. Moisés Diaz</strong>. I look forward to fruitful collaborations and new experiences in Spain! 🇪🇸',
@@ -249,12 +218,3 @@ const news = ref([
   },
 ]);
 </script>
-
-<style scoped>
-.text-gradient {
-  background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-</style>

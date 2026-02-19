@@ -1,37 +1,25 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['vuetify-nuxt-module'],
-  
-  vuetify: {
-    moduleOptions: {
-      /* vuetify options */
-      styles: 'sass',
-    },
-    vuetifyOptions: {
-      theme: {
-        defaultTheme: 'light',
-        themes: {
-          light: {
-            colors: {
-              primary: '#084b0c',
-              secondary: '#028108',
-              accent: '#4caf50',
-              error: '#f44336',
-              warning: '#ff9800',
-              info: '#2196f3',
-              success: '#66bb6a',
-            },
-          },
-        },
-      },
-    }
-  },
-
   ssr: true,
-  
+  compatibilityDate: "2024-11-01",
+  devtools: { enabled: true },
   app: {
     head: {
-      charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1',
-    }
-  }
-})
+      title: "Emanuele Colonna",
+      meta: [{ name: "description", content: "Personal Web Site" }],
+    },
+  },
+
+  build: {
+    transpile: ["vuetify"]
+  },
+
+  buildModules: ['@nuxtjs/vuetify'],
+
+  imports: {
+    autoImport: true,
+    dirs: ["*"],
+  },
+
+  modules: ["vuetify-nuxt-module"],
+});

@@ -19,12 +19,6 @@
                 {{ publication.abstract }}
             </p>
         </v-card-text>
-        <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn v-if="isTruncated" icon @click="toggleDescription">
-                <v-icon>{{ showFullAbstract ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-            </v-btn>
-        </v-card-actions>
     </v-card>
 </template>
 
