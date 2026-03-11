@@ -189,6 +189,10 @@ const { lectures } = useLectures();
 
 const news = ref([
   {
+    date: "Mar 2026",
+    html: 'My six-month visiting period at <a href="https://www.ulpgc.es" target="_blank" class="text-primary text-decoration-none">Universidad de Las Palmas de Gran Canaria</a> has concluded, but the collaboration with <a href="https://idetic.ulpgc.es/en/" target="_blank" class="text-primary text-decoration-none">IDETIC</a> and <strong>Dr. Moisés Diaz</strong> continues! 🇪🇸',
+  },
+  {
     date: "Feb 2026",
     html: 'Out work <a href="https://www.sciencedirect.com/science/article/pii/S107731422600041X?via%3Dihub" target="_blank" class="text-primary text-decoration-none">Handscribe</a> was accepted at <a href="https://www.sciencedirect.com/journal/computer-vision-and-image-understanding" target="_blank" class="text-primary text-decoration-none">Computer Vision and Image Understanding</a>. 🏆',
   },
