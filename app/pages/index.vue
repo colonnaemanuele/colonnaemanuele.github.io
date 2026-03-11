@@ -190,7 +190,7 @@ const { lectures } = useLectures();
 const news = ref([
   {
     date: "Mar 2026",
-    html: 'My six-month visiting period at <a href="https://www.ulpgc.es" target="_blank" class="text-primary text-decoration-none">Universidad de Las Palmas de Gran Canaria</a> has concluded, but the collaboration with <a href="https://idetic.ulpgc.es/en/" target="_blank" class="text-primary text-decoration-none">IDETIC</a> and <strong>Dr. Moisés Diaz</strong> continues! 🇪🇸',
+    html: 'My six-month visiting period at <a href="https://www.ulpgc.es" target="_blank" class="text-primary text-decoration-none">Universidad de Las Palmas de Gran Canaria</a> has concluded, but the collaboration with <a href="https://idetic.ulpgc.es/en/" target="_blank" class="text-primary text-decoration-none">IDETIC</a> and <strong>Prof. Moisés Diaz</strong> continues! 🇪🇸',
   },
   {
     date: "Feb 2026",
@@ -198,7 +198,7 @@ const news = ref([
   },
   {
     date: "Sep 2025",
-    html: 'I have joined the <a href="https://www.ulpgc.es" target="_blank" class="text-primary text-decoration-none">Universidad de Las Palmas de Gran Canaria</a> as a visiting researcher at the <a href="https://idetic.ulpgc.es/en/" target="_blank" class="text-primary text-decoration-none">Instituto Universitario para el Desarrollo</a> for six months, under the supervision of <strong>Dr. Moisés Diaz</strong>. I look forward to fruitful collaborations and new experiences in Spain! 🇪🇸',
+    html: 'I have joined the <a href="https://www.ulpgc.es" target="_blank" class="text-primary text-decoration-none">Universidad de Las Palmas de Gran Canaria</a> as a visiting researcher at the <a href="https://idetic.ulpgc.es/en/" target="_blank" class="text-primary text-decoration-none">Instituto Universitario para el Desarrollo</a> for six months, under the supervision of <strong>Prof. Moisés Diaz</strong>. I look forward to fruitful collaborations and new experiences in Spain! 🇪🇸',
   },
   {
     date: "Jul 2025",
