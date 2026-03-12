@@ -9,7 +9,7 @@
           class="d-flex flex-column align-center justify-center pa-8 pa-md-12"
         >
           <v-avatar size="280" class="mb-8 elevation-12">
-            <v-img src="/assets/profile.jpeg" alt="Emanuele Colonna" cover />
+            <v-img src="/assets/profile.JPG" alt="Emanuele Colonna" cover position="bottom"/>
           </v-avatar>
 
           <ConnectMe />

@@ -14,7 +14,7 @@
             <v-row>
               <v-col cols="12" md="4">
                 <v-avatar size="200" class="mx-auto d-block">
-                  <v-img src="assets/profile.jpeg" alt="Profile Image">
+                  <v-img src="assets/profile.JPG" alt="Profile Image">
                     <template v-slot:placeholder>
                       <v-avatar color="grey lighten-2" size="200">
                         <v-icon large>mdi-account</v-icon>
