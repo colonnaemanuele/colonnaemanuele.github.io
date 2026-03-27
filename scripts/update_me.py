@@ -2,8 +2,7 @@ import requests
 import json
 import os
 
-# Sostituisci questo con il tuo Author ID di Semantic Scholar
-# (Ti spiego sotto come trovarlo)
+# Author ID di Semantic Scholar
 AUTHOR_ID = "2309245017" 
 JSON_PATH = "public/publications.json"
 
