@@ -6,7 +6,9 @@ on:
       - main  # o modifica con il tuo branch principale
     
   workflow_run:
-    workflows: ["Daily Sign Language Paper Scraper"]
+    workflows:
+      - "Daily Sign Language Paper Scraper"
+      - "Update My Publications"
     types:
       - completed
 
