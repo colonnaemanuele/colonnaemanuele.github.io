@@ -1,0 +1,1 @@
+import"./BeTiSI9m.js";import{u as i}from"./ClvCG8ZX.js";function r(t){return new URL(globalThis.location.href)}const c=()=>{const t=r(),n=new URL("/publications.json",t.origin).toString(),{data:o,pending:s,error:e}=i("publications",()=>$fetch(n),{server:!1,default:()=>[]});return{publications:o,pending:s,error:e}};export{c as u};
