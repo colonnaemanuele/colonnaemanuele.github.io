@@ -4,6 +4,9 @@ name: Update My Publications
 on:
   workflow_dispatch: 
 
+permissions:
+  contents: write # Permette di scrivere nel repository (per aggiornare il file JSON)
+
 jobs:
   update-portfolio:
     runs-on: ubuntu-latest

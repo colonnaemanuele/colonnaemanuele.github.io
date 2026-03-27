@@ -5,6 +5,9 @@ on:
     - cron: '0 2 * * *' # Esegui ogni giorno alle 2:00 UTC
   workflow_dispatch: # Permette di eseguirlo manualmente da GitHub
 
+permissions:
+  contents: write # Permette di scrivere nel repository (per aggiornare il file JSON)
+
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest

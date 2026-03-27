@@ -14,7 +14,7 @@ def fetch_my_publications():
         "limit": 100 # Prende fino alle tue ultime 100 pubblicazioni
     }
     
-    print(f"Recupero le pubblicazioni per l'autore {AUTHOR_ID}...")
+    print("Recupero le pubblicazioni per l'autore...")
     response = requests.get(url, params=params)
     
     if response.status_code != 200:
