@@ -45,7 +45,7 @@
 </template>
 
 <script setup lang="ts">
-import type { SlPaper } from '@/models/slPaper';
+import type { SlPaper } from '@/models/paper';
 
 // In Nuxt 3, i file in "public" vengono serviti direttamente dalla root "/"
 const { data: papers, pending, error } = useFetch<SlPaper[]>('/sl_papers.json', {

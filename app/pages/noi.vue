@@ -46,10 +46,7 @@ export default {
     },
     mounted() {
         // Import all images from assets/private folder
-        const images = import.meta.glob('~/assets/private/*', {
-            eager: true,
-            import: 'default',
-        });
+        const images = import.meta.glob('~/assets/private/*', { query: '?url', import: 'default', eager: true })
         
         this.photos = Object.values(images).sort(() => Math.random() - 0.5);
     },

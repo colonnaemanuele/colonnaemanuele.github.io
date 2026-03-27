@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main  # o modifica con il tuo branch principale
+    
+  workflow_run:
+    workflows: ["Daily Sign Language Paper Scraper"]
+    types:
+      - completed
 
 # Add permissions required for GitHub Pages
 permissions:
