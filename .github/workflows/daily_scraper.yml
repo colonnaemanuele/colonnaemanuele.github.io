@@ -22,14 +22,13 @@ jobs:
       - name: Set up Python
         run: uv python install 3.10
 
-      # Installa le dipendenze usando uv
       - name: Install dependencies
-        # Usiamo --system perché nelle GitHub Actions siamo già in un ambiente isolato (container)
-        run: uv pip install --system requests
+        run: |
+          uv venv
+          uv pip install requests
 
-      # Esegue lo script
       - name: Run Scraper
-        run: python scripts/scraper.py
+        run: uv run scripts/scraper.py
 
       # Committa e pusha le modifiche
       - name: Commit and Push changes
