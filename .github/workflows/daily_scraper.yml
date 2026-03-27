@@ -1,0 +1,47 @@
+name: Daily Sign Language Paper Scraper
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # Esegui ogni giorno alle 2:00 UTC
+  workflow_dispatch: # Permette di eseguirlo manualmente da GitHub
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Installa uv
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.10
+
+      # Installa le dipendenze usando uv
+      - name: Install dependencies
+        # Usiamo --system perché nelle GitHub Actions siamo già in un ambiente isolato (container)
+        run: uv pip install --system requests
+
+      # Esegue lo script
+      - name: Run Scraper
+        run: python scripts/scraper.py
+
+      # Committa e pusha le modifiche
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/sl_papers.json
+          
+          # Controlla se ci sono state modifiche al file
+          if git diff-index --quiet HEAD; then
+            echo "Nessun nuovo paper trovato oggi."
+          else
+            git commit -m "chore: aggiornamento quotidiano paper Sign Language"
+            git push
+          fi
