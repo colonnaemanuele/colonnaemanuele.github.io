@@ -5,8 +5,7 @@
     "journal": "Ital-IA",
     "year": "2025",
     "url": "https://www.semanticscholar.org/paper/6619e490ef11c1a47750bfcbd837d97424d7dcf0",
-    "abstract": "Nessun abstract disponibile.",
-    "showFullAbstract": false
+    "abstract": "Generative AI is rapidly advancing, enabling the creation of diverse and high-quality content across multiple modalities, including text, images, audio, and video. However, much of this progress remains confined to general-purpose tasks, often neglecting real-world applications’ unique complexities and domain-specific requirements. In this paper, we present a unified perspective on our research at the Computational Intelligence Laboratory (CILab), University of Bari Aldo Moro, aimed at advancing domain-aware generative AI across five core tasks: text-to-text, text-to-image, text-to-video, image-to-text, and image-to-audio. Our work introduces methodological innovations such as text-guided multi-mask inpainting with localized attention, explainable image-to-text pipelines for medical reporting, and generative sign language video synthesis using diffusion models. We further contribute new datasets and propose novel evaluation frameworks tailored to domain-specific constraints, including creativity, factual alignment, inclusivity, and human-centered assessment. Through applications in healthcare, cultural heritage, accessibility, and human capital management, we show how generative AI can be used for content creation and as a driver of creativity, inclusivity, and knowledge transfer. This paper argues for a shift toward more grounded, explainable, and domain-specific generative models. We aim to pave the way for impactful AI applications in complex, real-world scenarios by addressing key gaps in current practices.","showFullAbstract": false
   },
   {
     "title": "Label Anything: Multi-Class Few-Shot Semantic Segmentation with Visual Prompts",
@@ -24,7 +23,7 @@
     "journal": "NL4AI@AI*IA",
     "year": "2024",
     "url": "https://www.semanticscholar.org/paper/f3fefe6d9c10f35e1070623d7b68963fbdce3f7c",
-    "abstract": "Nessun abstract disponibile.",
+    "abstract": "In the rapidly evolving field of human-computer interaction, the need for inclusive and accessible communication methods has become increasingly vital. This paper introduces an early exploration of Text-to-LIS, a new model designed to generate contextually accurate Italian Sign Language (LIS) gestures for digital humans. Our approach addresses the importance of non-verbal communication in virtual environments, focusing on enhancing interaction for the deaf and hard-of-hearing community. The core contribution of this work is developing an iterative framework that leverages a comprehensive multimodal dataset, integrating textual and audio inputs with visual data. Utilizing state-of-the-art deep learning algorithms and advanced human pose estimation techniques, the framework enables the progressive refinement of generated gestures, ensuring realism and contextual relevance. The potential applications of the Text-to-LIS model are wide-ranging, from improving accessibility in digital environments to supporting educational tools and promoting LIS in the digital age. The code is publicly available at: https://github.com/CarpiDiem98/text-to-lis/.",
     "showFullAbstract": false
   }
 ]

@@ -1,11 +1,18 @@
 import type { Lecture } from "@/models/lecture";
 
 export const useLectures = () => {
-  const lectureAssets = import.meta.glob("~/assets/lecture/**", { eager: true, as: "url" });
+  const lectureAssets = import.meta.glob<string>("~/assets/lecture/**", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  });
   
   function findAsset(filename: string): string | null {
     for (const key in lectureAssets) {
-      const url = (lectureAssets as Record<string, string>)[key];
+      const url = lectureAssets[key];
+      if (!url) {
+        continue;
+      }
       if (key.endsWith(filename) || url.endsWith(filename)) {
         return url;
       }

@@ -8,7 +8,7 @@ on:
   workflow_run:
     workflows:
       - "Daily Sign Language Paper Scraper"
-      - "Update My Publications"
+      - "Update My Publications Portfolio" # Assicurati che il nome combaci esattamente con il tuo file yaml
     types:
       - completed
 
@@ -24,18 +24,21 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      # Installiamo Bun al posto di Node.js
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: '20'
+          bun-version: latest
 
+      # Usiamo bun per installare le dipendenze (sarà velocissimo)
       - name: Install dependencies
-        run: npm install
+        run: bun install
 
+      # Usiamo bun per lanciare il comando di build di Nuxt
       - name: Generate static site
-        run: npm run generate
+        run: bun run generate
       
       - name: Create .nojekyll file
         run: touch .output/public/.nojekyll

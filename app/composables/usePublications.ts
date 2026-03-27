@@ -1,8 +1,9 @@
 import type { Publication } from "@/models/publication";
 
 export const usePublications = () => {
-  // useFetch carica asincronamente il JSON che verrà generato dallo script
-  const { data: publications, pending, error } = useFetch<Publication[]>('/publications.json', {
+  // Load JSON from public folder without routing it through page navigation.
+  const { data: publications, pending, error } = useAsyncData<Publication[]>('publications', () =>
+    $fetch('/publications.json'), {
     default: () => []
   });
 
