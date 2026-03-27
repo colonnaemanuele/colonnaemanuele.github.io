@@ -1,0 +1,1 @@
+import{u as a,a as i}from"./CLAN3KUc.js";const u=()=>{const s=a(),t=new URL("/publications.json",s.origin).toString(),{data:e,pending:n,error:o}=i("publications",()=>$fetch(t),{server:!1,default:()=>[]});return{publications:e,pending:n,error:o}};export{u};
