@@ -2,7 +2,7 @@ name: Daily Sign Language Paper Scraper
 
 on:
   schedule:
-    - cron: '0 2 * * *' # Esegui ogni giorno alle 2:00 UTC
+    - cron: '0 2 * * 1' # Esegui ogni lunedì alle 2:00 UTC
   workflow_dispatch: # Permette di eseguirlo manualmente da GitHub
 
 permissions:
