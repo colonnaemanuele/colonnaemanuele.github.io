@@ -1,11 +1,17 @@
 import type { Publication } from "@/models/publication";
 
 export const usePublications = () => {
-  // Load JSON from public folder without routing it through page navigation.
-  const { data: publications, pending, error } = useAsyncData<Publication[]>('publications', () =>
-    $fetch('/publications.json'), {
-    default: () => []
-  });
+  const requestURL = useRequestURL();
+  const publicationsUrl = new URL("/publications.json", requestURL.origin).toString();
+
+  const { data: publications, pending, error } = useAsyncData<Publication[]>(
+    "publications",
+    () => $fetch(publicationsUrl),
+    {
+      server: false,
+      default: () => [],
+    }
+  );
 
   return {
     publications,
