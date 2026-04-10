@@ -6,7 +6,10 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   runtimeConfig: {
-    hiddenPageKey: process.env.HIDDEN_PAGE_KEY ?? "",
+    hiddenPageKey:
+      process.env.NUXT_HIDDEN_PAGE_KEY ??
+      process.env.HIDDEN_PAGE_KEY ??
+      "",
   },
   appConfig: {
     hiddenRoutes,

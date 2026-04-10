@@ -23,6 +23,10 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+    middleware: 'hidden-pages',
+})
+
 useSeoMeta({
     robots: 'noindex, nofollow, noarchive',
 })
