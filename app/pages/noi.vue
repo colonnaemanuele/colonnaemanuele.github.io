@@ -22,10 +22,16 @@
     </v-container>
 </template>
 
-<script>
+<script setup lang="ts">
+useSeoMeta({
+    robots: 'noindex, nofollow, noarchive',
+})
+</script>
+
+<script lang="ts">
 export default {
     name: 'Noi',
-    data() {
+    data(): { photos: string[]; currentIndex: number } {
         return {
             photos: [],
             currentIndex: 0,
@@ -48,7 +54,7 @@ export default {
         // Import all images from assets/private folder
         const images = import.meta.glob('~/assets/private/*', { query: '?url', import: 'default', eager: true })
         
-        this.photos = Object.values(images).sort(() => Math.random() - 0.5);
+        this.photos = (Object.values(images) as string[]).sort(() => Math.random() - 0.5);
     },
 };
 </script>
